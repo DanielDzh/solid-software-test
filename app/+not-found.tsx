@@ -1,9 +1,7 @@
 import React from "react";
 
-import { NotFound } from "@/features";
-
 const NotFoundScreen = () => {
-  return <NotFound />;
+  return <></>;
 };
 
 export default NotFoundScreen;

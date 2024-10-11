@@ -4,7 +4,6 @@ import { Slot } from "expo-router";
 import "react-native-reanimated";
 
 import { Layout } from "@/layout";
-import AppProviders from "@/providers/AppProviders";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -16,14 +15,12 @@ export default function RootLayout() {
   }
 
   return (
-    <AppProviders>
-      <Layout>
-        <Slot
-          screenOptions={{
-            headerShown: false,
-          }}
-        />
-      </Layout>
-    </AppProviders>
+    <Layout>
+      <Slot
+        screenOptions={{
+          headerShown: false,
+        }}
+      />
+    </Layout>
   );
 }
