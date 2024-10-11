@@ -1,6 +1,8 @@
 import styled from "styled-components/native";
 
-export const Container = styled.Pressable`
+export const Container = styled.Pressable<{
+  $backgroundColor?: string;
+}>`
   display: flex;
   height: 100%;
   width: 100%;
@@ -8,6 +10,6 @@ export const Container = styled.Pressable`
   justify-content: center;
   cursor: pointer;
   flex: 1;
-  background-color: "#000";
+  background-color: ${(props) => props.$backgroundColor || "#000"};
   color: #fff;
 `;
